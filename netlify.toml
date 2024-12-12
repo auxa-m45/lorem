@@ -1,3 +1,7 @@
 [build]
   command = "npm run build"
   functions = "dist/api"
+
+[[edge_functions]]
+function = "lorem"
+path = "/ipsum"

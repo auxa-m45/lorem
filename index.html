@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem API</title>
+    <style>
+        body {
+            font-family: "Georgia", "Times New Roman", serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4A90E2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 5px 0 0;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #4A90E2;
+            display: inline-block;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        a {
+            color: #4A90E2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lorem API</h1>
+        <p>The simplest dummy text API</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Overview</h2>
+            <p>Lorem API provides dummy text in plain text format. Specify the desired number of characters, and receive a response with your requested dummy content.</p>
+        </section>
+
+        <section>
+            <h2>Endpoint</h2>
+            <p><code>GET https://loremapi.netlify.app/ipsum</code></p>
+        </section>
+
+        <section>
+            <h2>Parameters</h2>
+            <ul>
+                <li><code>length</code>: <strong>number</strong> (optional, range: 0-1,000,000) - Specify the number of characters you need.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Response</h2>
+            <p>Returns dummy text of up to the specified <code>length</code>. If <code>length</code> is not specified, the response defaults to 4075 characters.</p>
+            <p>Content-Type: <code>text/plain</code></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed with simplicity in mind. Powered by Lorem API.</p>
+        <p><a href="https://loremapi.netlify.app">Visit our homepage</a></p>
+    </footer>
+</body>
+</html>

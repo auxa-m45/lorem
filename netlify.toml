@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "pnpm run build"
   functions = "dist/api"
 
 [[edge_functions]]

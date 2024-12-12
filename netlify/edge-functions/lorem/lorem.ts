@@ -13,12 +13,9 @@ Parturient arcu pretium phasellus gravida adipiscing interdum molestie. Turpis t
 `;
 
 function generateTextUntilN(charLimit: number): string {
-  if (charLimit <= 0) {
-    return "";
-  }
-
-  const repeated = repeatedText.repeat(Math.ceil(charLimit / repeatedText.length));
-  return repeated.slice(0, charLimit);
+  const limit = (charLimit <= 0) ? 4705 : (charLimit >= 10000000) ? 10000000 : charLimit;
+  const repeated = repeatedText.repeat(Math.ceil(limit / repeatedText.length));
+  return repeated.slice(0, limit);
 }
 
 
@@ -26,7 +23,7 @@ export default async (request: Request, context: Context) => {
   console.log(`There was a request from ${context.geo.city} to ${request.url}`)
   // get query parameters
   const params = new URL(request.url).searchParams
-  const length: number = Number.parseInt(params.get('length')?.toString()  || '1')
+  const length: number = Number.parseInt(params.get('length')?.toString()  || '4705')
 
   return new Response(generateTextUntilN(length)  , {
     headers: { 'content-type': 'text/plain' },
